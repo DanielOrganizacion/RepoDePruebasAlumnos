@@ -8,5 +8,6 @@ class CadenasAlumnoTest {
     void CP_01() {
         CadenasAlumno cadenasAlumno1 = new CadenasAlumno();
         assertEquals(true,cadenasAlumno1.sonIguales("hola","hola"));
+        assertEquals(false,cadenasAlumno1.sonIguales("hola","hola1"));
     }
 }

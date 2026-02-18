@@ -1,4 +1,3 @@
-(!!!Repositorio en puebas, necesito el visto bueno de la maestra para poder ponerlo en marcha¡¡¡)
 REQUISITOS:
   -JDK Java 21
   -JUnit5

@@ -18,5 +18,9 @@ class CadenasAlumnoTestDaniel {
     void CP_03() {
         assertEquals(false,cadenasAlumno1.sonIguales("hola","hola1"));
     }
+    @Test
+    void CP_04() {
+        assertEquals(false,cadenasAlumno1.sonIguales("hola","Hola"));
+    }
 
 }

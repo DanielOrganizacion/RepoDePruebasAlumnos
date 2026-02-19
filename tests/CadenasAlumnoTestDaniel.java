@@ -8,21 +8,30 @@ class CadenasAlumnoTestDaniel {
     CadenasAlumno cadenasAlumno1 = new CadenasAlumno();
 
     @Test
-    void CP_01() {
+    void CP_01Iguales() {
         assertEquals(true,cadenasAlumno1.sonIguales("hola","hola"));
     }
     @Test
-    void CP_02() {
+    void CP_02NoIguales() {
         assertEquals(false,cadenasAlumno1.sonIguales("hola","halo"));
     }
 
     @Test
-    void CP_03() {
+    void CP_03DiferenteCadena() {
         assertEquals(false,cadenasAlumno1.sonIguales("hola","hola1"));
     }
     @Test
-    void CP_04() {
+    void CP_04DiferenciaDeLetraMayor(){
         assertEquals(false,cadenasAlumno1.sonIguales("hola","Hola"));
+    }
+    @Test
+    void CP_05DiferenciaDeLetraMenor() {
+        assertEquals(false,cadenasAlumno1.sonIguales("hola","hol"));
+    }
+
+    @Test //No se controla
+    void CP_06Null() {
+        assertEquals(false, cadenasAlumno1.sonIguales(null,null));
     }
 
     @ParameterizedTest
@@ -32,7 +41,7 @@ class CadenasAlumnoTestDaniel {
             "Manolo,Manolo",
             "sueco, sueco"
     })
-    public void Cp05_Parametrizado(String cadena1, String cadena2){
+    public void Cp07_Parametrizado(String cadena1, String cadena2){
         boolean resultado = cadenasAlumno1.sonIguales(cadena1, cadena2);
         assertEquals(true, cadenasAlumno1.sonIguales(cadena1,cadena2));
 
